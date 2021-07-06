@@ -9,11 +9,14 @@
 import FooterGuide from './components/FooterGuide/FooterGuide'
 
 export default {
+  mounted () {
+    this.$store.dispatch('getAddress', this.getAddress)
+    this.$store.dispatch('getUserInfo', this.getUserInfo)
+  },
   components: {
     FooterGuide
   }
 }
-
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
@@ -22,5 +25,4 @@ export default {
     height 100%
     background #f5f5f5
     position relative
-
 </style>
